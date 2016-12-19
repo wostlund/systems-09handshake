@@ -4,9 +4,8 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#define MESSAGE_BUFFER_SIZE 1024
 
-int server_handshake(int *x){
-  mkfifo("mario", 0644);
-  x=open("luigi", O_RDONLY);
-  read(
-}
+int server_handshake(int *fromClient);
+int client_handshake(int *toServer);
+
